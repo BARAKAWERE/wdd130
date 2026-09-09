@@ -1,3 +1,4 @@
+/* General page styles */
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -5,19 +6,20 @@ body {
 }
 
 header {
-    background-color: #222222;
-    color: #ffffff;
+    background-color: #222;
+    color: #fff;
     padding: 1rem;
     text-align: center;
 }
 
+/* Navigation */
 nav {
-    background-color: #222222;
+    background-color: #222;
     padding: 0.5rem;
 }
 
 nav a {
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
     padding: 0.5rem 1rem;
     display: block;
@@ -27,6 +29,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Main content */
 main {
     max-width: 840px;
     margin: 0 auto;
@@ -34,7 +37,7 @@ main {
 }
 
 h1 {
-    color: #222222;
+    color: #222;
     text-align: center;
 }
 
@@ -43,22 +46,24 @@ main img {
     height: auto;
     display: block;
     margin: 0 auto 1rem auto;
-    border: 3px solid #444444;
+    border: 3px solid #444;
     padding: 4px;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 0.3);
+    border-radius: 50%;
 }
 
 p {
     padding: 0;
 }
 
+/* Aside / country info box */
 aside {
     width: 20rem;
     margin: 1rem auto;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(0 0 0 / 0.2);
     padding: 1rem;
-    background-color: #eeeeee;
-    color: #333333;
+    background-color: #eee;
+    color: #333;
     text-align: center;
 }
 
@@ -67,9 +72,10 @@ aside img {
     height: auto;
 }
 
+/* Footer */
 footer {
     margin-top: 15px;
-    border-top: 1px solid #000000;
+    border-top: 1px solid #000;
     text-align: center;
     padding: 1rem;
 }
