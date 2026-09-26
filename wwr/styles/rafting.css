@@ -45,29 +45,39 @@ article {
     padding: 8px;
 }
 
+/* Header: CSS Grid layout for logo + nav side by side */
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
     background-color: var(--primary-color);
     color: var(--accent2-color);
 }
 
+/* Nav: CSS Flex layout, horizontal boxed buttons like the wireframe */
 header nav {
     display: flex;
-    flex-direction: column;
-    gap: 6px;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 header nav a {
-    color: var(--accent2-color);
+    background-color: #ffffff;
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
+    padding: 8px 16px;
+    border: 1px solid var(--accent1-color);
+    border-radius: 4px;
 }
 
 header nav a:hover,
 header nav a:focus {
-    text-decoration: underline;
+    background-color: var(--accent2-color);
+    color: var(--accent1-color);
 }
 
 .logo {
@@ -124,6 +134,66 @@ section {
 section h2 {
     margin-bottom: 8px;
     text-align: center;
+}
+
+/* History: text - image - text, three columns like the wireframe */
+.history-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 16px;
+    padding: 8px;
+}
+
+.history-content p {
+    flex: 1 1 220px;
+    margin: 0;
+    padding: 0;
+}
+
+.history-content img {
+    width: 220px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+/* Adventures gallery: 5 figures spanning the section horizontally */
+.adventure-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin: 16px;
+}
+
+.adventure-gallery figure {
+    margin: 0;
+    text-align: center;
+}
+
+.adventure-gallery img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+}
+
+.adventure-gallery figcaption {
+    margin-top: 4px;
+    font-family: var(--heading-font);
+    color: var(--accent1-color);
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 700px) {
+    .adventure-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 footer {
