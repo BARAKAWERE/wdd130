@@ -323,3 +323,186 @@ footer {
     font-family: var(--heading-font);
     color: var(--accent1-color);
 }
+
+/* Trips page: call to action */
+.trips-cta {
+    text-align: center;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent2-color);
+    color: var(--accent1-color);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    margin-top: 8px;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Trip descriptions: two-column grid, alternating sides */
+.trip-details {
+    border: none;
+    background-color: transparent;
+}
+
+.trip-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    margin: 16px;
+    padding: 16px;
+}
+
+.trip-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.trip-card.reverse img {
+    order: 2;
+}
+
+.trip-card.reverse .trip-text {
+    order: 1;
+}
+
+.trip-text h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+@media (max-width: 700px) {
+    .trip-card,
+    .trip-card.reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .trip-card.reverse img,
+    .trip-card.reverse .trip-text {
+        order: unset;
+    }
+}
+
+/* Trips table */
+.trip-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    background-color: #fff;
+}
+
+.trip-table th,
+.trip-table td {
+    border: 1px solid var(--primary-color);
+    padding: 10px;
+    text-align: left;
+}
+
+.trip-table th {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.trip-table tr:nth-child(even) {
+    background-color: var(--secondary-color);
+}
+
+/* Home page: intro + CTA */
+.home-intro {
+    text-align: center;
+}
+
+.home-intro .cta-button {
+    margin-top: 8px;
+}
+
+/* Home page: feature grid using CSS Grid */
+.home-grid {
+    text-align: center;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.feature-card {
+    background-color: #fff;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.feature-card h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+@media (max-width: 700px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Newsletter signup */
+.newsletter {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.newsletter label {
+    display: none;
+}
+
+.newsletter input[type="email"] {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    min-width: 220px;
+}
+
+.newsletter button {
+    background-color: var(--accent2-color);
+    color: var(--accent1-color);
+    border: none;
+    padding: 8px 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.newsletter button:hover,
+.newsletter button:focus {
+    background-color: #fff;
+    color: var(--primary-color);
+}
